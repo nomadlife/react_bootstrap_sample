@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { Navbar, NavbarBrand, Nav, Tooltip, OverlayTrigger  } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { ReactComponent as Logo } from './assets/logo.svg';

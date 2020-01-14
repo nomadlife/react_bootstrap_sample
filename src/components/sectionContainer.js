@@ -1,5 +1,6 @@
 import React from 'react';
-import { MDBContainer } from 'mdbreact';
+// import { MDBContainer } from 'mdbreact';
+import { Container } from 'react-bootstrap';
 import classNames from 'classnames';
 
 const SectionContainer = ({
@@ -35,10 +36,10 @@ const SectionContainer = ({
     <>
       {title}
       {header}
-      <MDBContainer fluid className={classes} style={style}>
+      <Container fluid className={classes} style={style}>
         {description}
         {children}
-      </MDBContainer>
+      </Container>
     </>
   );
 };

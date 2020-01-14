@@ -13,21 +13,24 @@ import {
   MDBCardBody,
   MDBCardText
 } from 'mdbreact';
+
+import { Container, Row, Col, Jumbotron } from 'react-bootstrap';
+
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
 
 const JumbotronPage = () => {
   return (
     <>
-      <MDBContainer className='mt-5'>
+      <Container className='mt-5'>
         <DocsLink
           title='Jumbotron'
           href='https://mdbootstrap.com/docs/react/components/jumbotron/'
         />
-        <MDBRow>
-          <MDBCol>
+        <Row>
+          <Col>
             <SectionContainer noBorder header='Basic example'>
-              <MDBJumbotron className='text-center'>
+              <Jumbotron className='text-center'>
                 <h2 className='h1 display-3'>Hello, world!</h2>
                 <p className='lead'>
                   This is a simple hero unit, a simple Jumbotron-style component
@@ -42,43 +45,43 @@ const JumbotronPage = () => {
                 <p className='lead'>
                   <MDBBtn color='primary'>Learn More</MDBBtn>
                 </p>
-              </MDBJumbotron>
+              </Jumbotron>
             </SectionContainer>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
+          </Col>
+        </Row>
+      </Container>
 
       <hr />
 
       <h4 className='title mt-5 mb-4 container text-left'>Fluid jumbotron</h4>
-      <MDBJumbotron fluid>
-        <MDBContainer>
+      <Jumbotron fluid>
+        <Container>
           <h2 className='display-4'>Fluid jumbotron</h2>
           <p className='lead'>
             This is a modified jumbotron that occupies the entire horizontal
             space of its parent.
           </p>
-        </MDBContainer>
-      </MDBJumbotron>
+        </Container>
+      </Jumbotron>
 
       <hr />
 
-      <MDBContainer className='mt-5'>
-        <MDBRow>
-          <MDBCol>
+      <Container className='mt-5'>
+        <Row>
+          <Col>
             <SectionContainer
               noBorder
               header='Jumbotron with a background image'
             >
-              <MDBJumbotron style={{ padding: 0 }}>
-                <MDBCol
+              <Jumbotron style={{ padding: 0 }}>
+                <Col
                   className='text-white text-center py-5 px-4'
                   style={{
                     backgroundImage:
                       'url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg)'
                   }}
                 >
-                  <MDBCol className='py-5'>
+                  <Col className='py-5'>
                     <MDBCardTitle className='h1-responsive pt-3 m-5 font-bold'>
                       Create your beautiful website with MDBootstrap
                     </MDBCardTitle>
@@ -91,19 +94,19 @@ const JumbotronPage = () => {
                     <MDBBtn outline color='white' className='mb-5'>
                       <MDBIcon icon='clone' className='mr-2' /> View project
                     </MDBBtn>
-                  </MDBCol>
-                </MDBCol>
-              </MDBJumbotron>
+                  </Col>
+                </Col>
+              </Jumbotron>
             </SectionContainer>
-          </MDBCol>
-        </MDBRow>
+          </Col>
+        </Row>
 
         <hr />
 
-        <MDBRow className='mt-5'>
-          <MDBCol>
+        <Row className='mt-5'>
+          <Col>
             <SectionContainer noBorder header='Jumbotron with image'>
-              <MDBJumbotron className='text-center'>
+              <Jumbotron className='text-center'>
                 <MDBCardTitle className='card-title h4 pb-2'>
                   <strong>My adventure</strong>
                 </MDBCardTitle>
@@ -147,17 +150,17 @@ const JumbotronPage = () => {
                     </MDBNavLink>
                   </MDBNav>
                 </MDBCardBody>
-              </MDBJumbotron>
+              </Jumbotron>
             </SectionContainer>
-          </MDBCol>
-        </MDBRow>
+          </Col>
+        </Row>
 
         <hr />
 
-        <MDBRow className='mt-5'>
-          <MDBCol>
+        <Row className='mt-5'>
+          <Col>
             <SectionContainer noBorder header='Jumbotron with buttons'>
-              <MDBJumbotron>
+              <Jumbotron>
                 <MDBCardBody>
                   <MDBCardTitle className='h2'>
                     Material Design for Bootstrap
@@ -182,11 +185,11 @@ const JumbotronPage = () => {
                     </MDBBtn>
                   </div>
                 </MDBCardBody>
-              </MDBJumbotron>
+              </Jumbotron>
             </SectionContainer>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
