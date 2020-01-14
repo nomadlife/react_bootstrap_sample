@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
-import {
-  // MDBNavbar,
-  // MDBNavbarBrand,
-  // MDBNavbarNav,
-  // MDBNavbarToggler,
-  // MDBCollapse,
-  // MDBNavItem,
-  MDBFooter,
-  // MDBNavLink,
-  MDBTooltip,
-  MDBIcon
-} from 'mdbreact';
-import { Navbar, NavbarBrand, Nav, Tooltip } from 'react-bootstrap';
+
+import { Navbar, NavbarBrand, Nav, Tooltip, OverlayTrigger  } from 'react-bootstrap';
+
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { ReactComponent as Logo } from './assets/logo.svg';
 import Routes from './Routes';
@@ -131,13 +121,13 @@ class App extends Component {
                   </Nav.Link>
                 </Nav.Item>
 
-                
-
                 <Nav.Item>
-                  <MDBTooltip
+                  <OverlayTrigger
+                    // key={placement}
                     placement='bottom'
-                    domElement
-                    style={{ display: 'block' }}
+                    overlay={
+                      <Tooltip>PRO</Tooltip>
+                    }
                   >
                     <a
                       className='nav-link Ripple-parent'
@@ -145,18 +135,22 @@ class App extends Component {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <strong>
-                        <MDBIcon far icon='gem' />
-                      </strong>
-                    </a>
-                    <span>PRO</span>
-                  </MDBTooltip>
+
+                  <strong>
+                        <i class="fas fa-gem"></i>
+                        </strong>
+                      </a>
+                  </OverlayTrigger>
                 </Nav.Item>
+
+
+
                 <Nav.Item>
-                  <MDBTooltip
+                  <OverlayTrigger
                     placement='bottom'
-                    domElement
-                    style={{ display: 'block' }}
+                    overlay={
+                      <Tooltip>FREE</Tooltip>
+                    }
                   >
                     <a
                       className='nav-link Ripple-parent'
@@ -165,17 +159,17 @@ class App extends Component {
                       rel='noopener noreferrer'
                     >
                       <strong>
-                        <MDBIcon icon='download' />
+                      <i class="fas fa-download"></i>
                       </strong>
                     </a>
-                    <span>FREE</span>
-                  </MDBTooltip>
+                  </OverlayTrigger>
                 </Nav.Item>
+
+
                 <Nav.Item className='mr-2'>
-                  <Tooltip
+                  <OverlayTrigger
                     placement='bottom'
-                    domElement
-                    style={{ display: 'block' }}
+                    overlay={<Tooltip>SUPPORT</Tooltip>}
                   >
                     <a
                       className='nav-link Ripple-parent'
@@ -184,12 +178,12 @@ class App extends Component {
                       rel='noopener noreferrer'
                     >
                       <strong>
-                        <MDBIcon icon='question-circle' />
+                      <i class="fas fa-question-circle"></i>
                       </strong>
                     </a>
-                    <span>SUPPORT</span>
-                  </Tooltip>
+                  </OverlayTrigger>
                 </Nav.Item>
+
               </Nav>
             </Navbar.Collapse>
           </Navbar>
