@@ -46,7 +46,7 @@ class App extends Component {
               onClick={this.toggleCollapse('mainNavbarCollapse')}
             />
             <Navbar.Collapse id='mainNavbarCollapse' isOpen={collapseID} navbar>
-              <Nav right>
+              <Nav className="justify-content-end" style={{ width: "100%" }}>
                 <Nav.Item>
                   <Nav.Link
                     exact
