@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBNavItem,
+  // MDBNavbar,
+  // MDBNavbarBrand,
+  // MDBNavbarNav,
+  // MDBNavbarToggler,
+  // MDBCollapse,
+  // MDBNavItem,
   MDBFooter,
-  MDBNavLink,
+  // MDBNavLink,
   MDBTooltip,
   MDBIcon
 } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Navbar, NavbarBrand, Nav, Tooltip } from 'react-bootstrap';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { ReactComponent as Logo } from './assets/logo.svg';
 import Routes from './Routes';
 
@@ -45,93 +46,94 @@ class App extends Component {
     return (
       <Router>
         <div className='flyout'>
-          <MDBNavbar color='indigo' dark expand='md' fixed='top' scrolling>
-            <MDBNavbarBrand href='/' className='py-0 font-weight-bold'>
+          <Navbar className='indigo' expand='md' fixed='top'>
+            <NavbarBrand href='/' className='py-0 font-weight-bold'>
               <Logo style={{ height: '2.5rem', width: '2.5rem' }} />
-              <strong className='align-middle'>MDB React</strong>
-            </MDBNavbarBrand>
-            <MDBNavbarToggler
+              <strong className='align-middle'>React-Bootstrap</strong>
+            </NavbarBrand>
+
+            <Navbar.Toggle
               onClick={this.toggleCollapse('mainNavbarCollapse')}
             />
-            <MDBCollapse id='mainNavbarCollapse' isOpen={collapseID} navbar>
-              <MDBNavbarNav right>
-                <MDBNavItem>
-                  <MDBNavLink
+            <Navbar.Collapse id='mainNavbarCollapse' isOpen={collapseID} navbar>
+              <Nav right>
+                <Nav.Item>
+                  <Nav.Link
                     exact
-                    to='/'
+                    as={Link} to='/'
                     onClick={this.closeCollapse('mainNavbarCollapse')}
                   >
                     <strong>Home</strong>
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
                     onClick={this.closeCollapse('mainNavbarCollapse')}
-                    to='/css'
+                    as={Link} to='/css'
                   >
                     <strong>CSS</strong>
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
                     onClick={this.closeCollapse('mainNavbarCollapse')}
-                    to='/components'
+                    as={Link} to='/components'
                   >
                     <strong>Components</strong>
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
                     onClick={this.closeCollapse('mainNavbarCollapse')}
-                    to='/advanced'
+                    as={Link} to='/advanced'
                   >
                     <strong>Advanced</strong>
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
                     onClick={this.closeCollapse('mainNavbarCollapse')}
-                    to='/navigation'
+                    as={Link} to='/navigation'
                   >
                     <strong>Navigation</strong>
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
                     onClick={this.closeCollapse('mainNavbarCollapse')}
-                    to='/forms'
+                    as={Link} to='/forms'
                   >
                     <strong>Forms</strong>
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
                     onClick={this.closeCollapse('mainNavbarCollapse')}
-                    to='/tables'
+                    as={Link} to='/tables'
                   >
                     <strong>Tables</strong>
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
                     onClick={this.closeCollapse('mainNavbarCollapse')}
-                    to='/modals'
+                    as={Link} to='/modals'
                   >
                     <strong>Modals</strong>
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
                     onClick={this.closeCollapse('mainNavbarCollapse')}
-                    to='/addons'
+                    as={Link} to='/addons'
                   >
                     <strong>Addons</strong>
-                  </MDBNavLink>
-                </MDBNavItem>
+                  </Nav.Link>
+                </Nav.Item>
 
                 
 
-                <MDBNavItem>
+                <Nav.Item>
                   <MDBTooltip
                     placement='bottom'
                     domElement
@@ -149,8 +151,8 @@ class App extends Component {
                     </a>
                     <span>PRO</span>
                   </MDBTooltip>
-                </MDBNavItem>
-                <MDBNavItem>
+                </Nav.Item>
+                <Nav.Item>
                   <MDBTooltip
                     placement='bottom'
                     domElement
@@ -168,9 +170,9 @@ class App extends Component {
                     </a>
                     <span>FREE</span>
                   </MDBTooltip>
-                </MDBNavItem>
-                <MDBNavItem className='mr-2'>
-                  <MDBTooltip
+                </Nav.Item>
+                <Nav.Item className='mr-2'>
+                  <Tooltip
                     placement='bottom'
                     domElement
                     style={{ display: 'block' }}
@@ -186,21 +188,21 @@ class App extends Component {
                       </strong>
                     </a>
                     <span>SUPPORT</span>
-                  </MDBTooltip>
-                </MDBNavItem>
-              </MDBNavbarNav>
-            </MDBCollapse>
-          </MDBNavbar>
+                  </Tooltip>
+                </Nav.Item>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
           {collapseID && overlay}
           <main style={{ marginTop: '4rem' }}>
             <Routes />
           </main>
-          <MDBFooter color='indigo'>
+          <div className='indigo navbar-fixed-bottom'>
             <p className='footer-copyright mb-0 py-3 text-center'>
               &copy; {new Date().getFullYear()} Copyright:
               <a href='https://www.MDBootstrap.com'> MDBootstrap.com </a>
             </p>
-          </MDBFooter>
+          </div>
         </div>
       </Router>
     );
