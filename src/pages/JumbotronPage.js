@@ -1,20 +1,21 @@
 import React from 'react';
-import {
-  MDBJumbotron,
-  MDBBtn,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCardTitle,
-  MDBIcon,
-  MDBNavLink,
-  MDBNav,
-  MDBCardImage,
-  MDBCardBody,
-  MDBCardText
-} from 'mdbreact';
 
-import { Container, Row, Col, Jumbotron } from 'react-bootstrap';
+// import {
+//   MDBJumbotron,
+//   MDBBtn,
+//   MDBContainer,
+//   MDBRow,
+//   MDBCol,
+//   MDBCardTitle,
+//   MDBIcon,
+//   MDBNavLink,
+//   MDBNav,
+//   MDBCardImage,
+//   MDBCardBody,
+//   MDBCardText
+// } from 'mdbreact';
+
+import { Container, Row, Col, Jumbotron, Card, Button, Nav, Link } from 'react-bootstrap';
 
 import DocsLink from '../components/docsLink';
 import SectionContainer from '../components/sectionContainer';
@@ -43,7 +44,7 @@ const JumbotronPage = () => {
                   content out within the larger container.
                 </p>
                 <p className='lead'>
-                  <MDBBtn color='primary'>Learn More</MDBBtn>
+                  <Button variant='primary'>Learn More</Button>
                 </p>
               </Jumbotron>
             </SectionContainer>
@@ -82,18 +83,18 @@ const JumbotronPage = () => {
                   }}
                 >
                   <Col className='py-5'>
-                    <MDBCardTitle className='h1-responsive pt-3 m-5 font-bold'>
+                    <div className='h1-responsive pt-3 m-5 font-bold'>
                       Create your beautiful website with MDBootstrap
-                    </MDBCardTitle>
+                    </div>
                     <p className='mx-5 mb-5'>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       Repellat fugiat, laboriosam, voluptatem, optio vero odio
                       nam sit officia accusamus minus error nisi architecto
                       nulla ipsum dignissimos. Odit sed qui, dolorum!
                     </p>
-                    <MDBBtn outline color='white' className='mb-5'>
-                      <MDBIcon icon='clone' className='mr-2' /> View project
-                    </MDBBtn>
+                    <Button variant="danger">
+                      <i class="far fa-copy mr-2"></i> View project
+                    </Button>
                   </Col>
                 </Col>
               </Jumbotron>
@@ -107,49 +108,39 @@ const JumbotronPage = () => {
           <Col>
             <SectionContainer noBorder header='Jumbotron with image'>
               <Jumbotron className='text-center'>
-                <MDBCardTitle className='card-title h4 pb-2'>
-                  <strong>My adventure</strong>
-                </MDBCardTitle>
-                <MDBCardImage
-                  src='https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg'
-                  className='img-fluid'
-                />
-                <MDBCardBody>
-                  <MDBCardTitle className='indigo-text h5 m-4'>
+                <Card>
+                  <Card.Title className='card-title h4 pb-2'>
+                    <strong>My adventure</strong>
+                  </Card.Title>
+                  <Card.Img
+                    src='https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg'
+                    className='img-fluid'
+                  />
+
+                </Card>
+                <Card.Body>
+                  <Card.Title className='indigo-text h5 m-4'>
                     Photography
-                  </MDBCardTitle>
-                  <MDBCardText>
+                  </Card.Title>
+                  <Card.Text>
                     Sed ut perspiciatis unde omnis iste natus sit voluptatem
                     accusantium doloremque laudantium, totam rem aperiam.
-                  </MDBCardText>
+                  </Card.Text>
 
-                  <MDBNav className='justify-content-center'>
-                    <MDBNavLink to='#!'>
-                      <MDBIcon
-                        fab
-                        icon='linkedin-in'
-                        className='grey-text'
-                        size='lg'
+                  <Nav className='justify-content-center'>
+                    <Nav.Link to='#!'>
+                      <i
+                        className='fab fa-linkedin-in'
                       />
-                    </MDBNavLink>
-                    <MDBNavLink to='#!'>
-                      <MDBIcon
-                        fab
-                        icon='twitter'
-                        className='grey-text'
-                        size='lg'
-                      />
-                    </MDBNavLink>
-                    <MDBNavLink to='#!'>
-                      <MDBIcon
-                        fab
-                        icon='facebook-f'
-                        className='grey-text'
-                        size='lg'
-                      />
-                    </MDBNavLink>
-                  </MDBNav>
-                </MDBCardBody>
+                    </Nav.Link>
+                    <Nav.Link to='#!'>
+                      <i className='fab fa-twitter ' />
+                    </Nav.Link>
+                    <Nav.Link to='#!'>
+                      <i className='fab fa-facebook-f' />
+                    </Nav.Link>
+                  </Nav>
+                </Card.Body>
               </Jumbotron>
             </SectionContainer>
           </Col>
@@ -161,30 +152,33 @@ const JumbotronPage = () => {
           <Col>
             <SectionContainer noBorder header='Jumbotron with buttons'>
               <Jumbotron>
-                <MDBCardBody>
-                  <MDBCardTitle className='h2'>
-                    Material Design for Bootstrap
-                  </MDBCardTitle>
-                  <p className='blue-text my-4 font-weight-bold'>
-                    Powerful and free Material Design UI KIT
-                  </p>
-                  <MDBCardText>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Fuga aliquid dolorem ea distinctio exercitationem delectus
-                    qui, quas eum architecto, amet quasi accusantium, fugit
-                    consequatur ducimus obcaecati numquam molestias hic itaque
-                    accusantium doloremque laudantium, totam rem aperiam.
-                  </MDBCardText>
-                  <hr className='my-4' />
-                  <div className='pt-2'>
-                    <MDBBtn color='primary' className='waves-effect'>
-                      Buy now <MDBIcon far icon='gem' />
-                    </MDBBtn>
-                    <MDBBtn outline color='primary' className='waves-effect'>
-                      Download <MDBIcon icon='download' />
-                    </MDBBtn>
-                  </div>
-                </MDBCardBody>
+                <Card>
+                  <Card.Body>
+                    <Card.Title className='h2'>
+                      Material Design for Bootstrap
+                    </Card.Title>
+                    <p className='blue-text my-4 font-weight-bold'>
+                      Powerful and free Material Design UI KIT
+                    </p>
+                    <Card.Text>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Fuga aliquid dolorem ea distinctio exercitationem delectus
+                      qui, quas eum architecto, amet quasi accusantium, fugit
+                      consequatur ducimus obcaecati numquam molestias hic itaque
+                      accusantium doloremque laudantium, totam rem aperiam.
+                    </Card.Text>
+                    <hr className='my-4' />
+                    <div className='pt-2'>
+                      <Button variant='primary' className='waves-effect'>
+                        Buy now <i className='fas fa-gem' />
+                      </Button>
+                      <Button variant='outline' className='waves-effect'>
+                        Download <i className='fas fa-download' />
+                      </Button>
+                    </div>
+                  </Card.Body>
+
+                </Card>
               </Jumbotron>
             </SectionContainer>
           </Col>
