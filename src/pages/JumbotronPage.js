@@ -1,20 +1,5 @@
 import React from 'react';
 
-// import {
-//   MDBJumbotron,
-//   MDBBtn,
-//   MDBContainer,
-//   MDBRow,
-//   MDBCol,
-//   MDBCardTitle,
-//   MDBIcon,
-//   MDBNavLink,
-//   MDBNav,
-//   MDBCardImage,
-//   MDBCardBody,
-//   MDBCardText
-// } from 'mdbreact';
-
 import { Container, Row, Col, Jumbotron, Card, Button, Nav, Link } from 'react-bootstrap';
 
 import DocsLink from '../components/docsLink';
