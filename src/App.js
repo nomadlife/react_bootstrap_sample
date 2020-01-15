@@ -195,7 +195,7 @@ class App extends Component {
           <div className='indigo navbar-fixed-bottom'>
             <p className='footer-copyright mb-0 py-3 text-center'>
               &copy; {new Date().getFullYear()} Copyright:
-              <a href='https://www.MDBootstrap.com'> MDBootstrap.com </a>
+              <a href='https://react-bootstrap.github.io/'> React Bootstrap </a>
             </p>
           </div>
         </div>
