@@ -1,26 +1,22 @@
 import React from 'react';
-import {
-  MDBEdgeHeader,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBJumbotron,
-  MDBIcon,
-  MDBAnimation
-} from 'mdbreact';
+
+import { Container, Row, Col, Jumbotron, Fade } from 'react-bootstrap';
+
 import MenuLink from '../components/menuLink';
 
 const CSSPage = () => {
   return (
     <>
-    <MDBEdgeHeader color='indigo darken-3' className='sectionPage' />
-      <MDBAnimation type='zoomIn' duration='500ms'>
-        <MDBContainer>
-          <MDBRow>
-            <MDBCol md='8' className='mx-auto'>
-                <MDBJumbotron className='mt-3'>
+    <div color='indigo darken-3' className='sectionPage' />
+      <Fade in type='zoomIn' duration='500ms'>
+        <Container>
+          <Row>
+            <Col md='8' className='mx-auto'>
+                <Jumbotron className='mt-3'>
                   <h1 className='text-center'>
-                    <MDBIcon icon='css3' brand className='indigo-text mr-w' />
+                    {/* <MDBIcon icon='css3' brand className='indigo-text mr-w' /> */}
+                      {/* <i className="fab fa-css3" style={{color: "indigo"}}></i> */}
+                      <i className="fab fa-css3 indigo-text mr-w" ></i>
                     CSS
                   </h1>
                   <ul className='list-unstyled example-components-list'>
@@ -32,11 +28,11 @@ const CSSPage = () => {
                     <MenuLink to='/css/masks' title='Masks' />
                     <MenuLink to='/css/masonry' title='Masonry Layout' />
                   </ul>
-                </MDBJumbotron>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </MDBAnimation>
+                </Jumbotron>
+            </Col>
+          </Row>
+        </Container>
+      </Fade>
     </>
   );
 };
